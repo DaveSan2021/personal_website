@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import MainNavbar from "./components/ui/MainNavbar";
+//import MainNavbar from "./components/ui/MainNavbar";
 
 
 export default function Home() {
