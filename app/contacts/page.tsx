@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <div className="mx-auto px-4 py-8 bg-white min-h-screen flex flex-col">
+    <div style={{ backgroundColor: "#83c5be" }} className="mx-auto px-4 py-8 bg-white min-h-screen flex flex-col">
       
   {/* Contact Header */}
   <div className="text-black text-3xl text-center mb-10">

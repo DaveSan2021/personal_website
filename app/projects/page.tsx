@@ -3,10 +3,7 @@ import Head from "next/head";
 
 export default function Page() {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-between p-24 bg-white">
-        <Head>
-          <div className="text-black">Projects Showcase</div>
-        </Head>
+      <div style={{ backgroundColor: '#83c5be' }} className="flex min-h-screen flex-col items-center justify-between p-24 bg-white">
         <main>
           <ProjectsShowcase />
         </main>

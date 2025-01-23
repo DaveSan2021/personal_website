@@ -19,9 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <main className="">
+      <body style={{ backgroundColor: '#006d77' }} className="min-h-screen">
+        {/* Full-width navbar */}
+        <header className="w-full bg-[#edf6f9] shadow-md">
           <MainNavbar />
+        </header>
+
+        {/* Restricted-width content */}
+        <main className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
           {children}
         </main>
       </body>

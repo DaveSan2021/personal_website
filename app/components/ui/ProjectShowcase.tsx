@@ -4,7 +4,7 @@ import { projects } from "./projects";
 const ProjectsShowcase = () => {
   return (
     <div>
-        <h2 className="text-5xl text-black mb-8 text-center">Projects Showcase</h2>
+        <h2 className="text-5xl text-black mb-4 text-center">Showcase</h2>
     <div className="container mx-auto px-4 py-8">
       <div className="space-y-12">
         {projects.map((project, index) => (
