@@ -8,7 +8,7 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/components/(button|navbar|ripple|spinner).js",
-    "./node_modules/@heroui/theme/dist/components/(image|navbar|popover|button|ripple|spinner).js"
+    "./node_modules/@heroui/theme/dist/components/(image|modal|navbar|popover|button|ripple|spinner).js"
   ],
   theme: {
     extend: {

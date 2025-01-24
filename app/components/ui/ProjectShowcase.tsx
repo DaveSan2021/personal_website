@@ -3,8 +3,8 @@ import { projects } from "./projects";
 
 const ProjectsShowcase = () => {
   return (
-    <div>
-        <h2 className="text-5xl text-black mb-4 text-center">Showcase</h2>
+    <div className="text-white">
+        <h2 className="text-5xl text-black mb-4 text-center text-[#7de2d1]">Showcase</h2>
     <div className="container mx-auto px-4 py-8">
       <div className="space-y-12">
         {projects.map((project, index) => (
@@ -16,8 +16,8 @@ const ProjectsShowcase = () => {
         >
           {/* Description */}
           <div className={`md:w-2/3 w-full ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-            <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
-            <p className="text-gray-700">{project.description}</p>
+            <h3 className="text-2xl font-semibold mb-4 text-[#339989]">{project.title}</h3>
+            <p className="text-gray-700 text-[#fffafb]">{project.description}</p>
             {project.link && (
               <a
                 href={project.link}

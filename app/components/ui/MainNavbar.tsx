@@ -8,10 +8,10 @@ const MainNavbar = () => {
     const pathname = usePathname();
 
     return (
-        <Navbar style={{ backgroundColor: "#edf6f9" }} isBlurred>
+        <Navbar style={{ backgroundColor: "#131515"}} className="text-[#7de2d1]" isBordered>
             {/* Navbar brand */}
             <NavbarContent justify="start">
-            <p className="font-bold text-inherit">
+            <p className="font-bold text-inherit text-white">
             Davayan <br />
             Sanyal
             </p>

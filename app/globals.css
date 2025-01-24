@@ -4,13 +4,13 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-rgb: 214, 219, 220; /* Replace with your desired solid background RGB color */
+  --background-rgb: 0, 23, 31; /* Updated with your desired solid background RGB color */
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 0, 0, 0; /* Adjust text color for light mode */
-    --background-rgb: 214, 219, 220; /* Same solid background for light mode */
+    --background-rgb: 0, 23, 31; /* Same solid background for light mode */
   }
 }
 
