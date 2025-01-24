@@ -2,33 +2,36 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <div style={{ backgroundColor: "#FFFFFF00" }} className="mx-auto px-4 py-8 bg-white min-h-screen flex flex-col text-white">
-      
-  {/* Contact Header */}
-  <div className="text-black text-3xl text-center mb-10 text-white">
-    Like what you see? Contact me!
-  </div>
+    <div 
+        style={{ backgroundColor: '#FFFFFF00' }} 
+        className="flex min-h-screen flex-col items-center justify-between p-24">
+    
 
   {/* Contact Options */}
-  <div className="flex flex-col md:flex-row flex-1 justify-center items-start">
-    <div className="flex flex-col items-center justify-start h-full w-full md:w-2/3 space-y-16">
-      <a href="mailto:davayansa@gmail.com" className="block">
-      <div className="flex flex-col items-center ">
-        <div className="w-24 h-24 mb-2">
-          <Image
-            src={'/gmail.png'}
-            alt={`Google Email Logo`}
-            width={96}
-            height={96}
-            className="rounded-lg shadow-lg"
-            placeholder="blur"
-            blurDataURL="/images/placeholder.png" // Optional: Add a placeholder image
-          />
-        </div>
-        <span>Gmail: davayansa@gmail.com</span>
+  <div className="flex flex-col justify-center space-y-6">
+    
+    {/* Contact Header */}
+    <h2 className="flex text-4xl mb-4 text-center justify-center text-[#7de2d1]">
+      My Links
+    </h2>
+
+    <div className="flex flex-col items-center justify-center space-y-2">
+      <a href="mailto:davayansa@gmail.com" className="flex flex-row items-center">
+      <div className="w-24 h-24">
+        <Image
+          src={'/gmail.png'}
+          alt={`Google Email Logo`}
+          width={96}
+          height={96}
+          className="rounded-lg shadow-lg"
+          placeholder="blur"
+          blurDataURL="/images/placeholder.png" // Optional: Add a placeholder image
+        />
       </div>
       </a>
-
+      <p className="text-[#339989] text-lg">Gmail: davayansa@gmail.com</p>
+    </div>
+    <div className="flex flex-col items-center justify-center space-y-2">
       <a href="https://www.linkedin.com/in/davayan-sanyal-b381831a1/" className="block">
       <div className="flex flex-col items-center">
         <div className="w-24 h-24 mb-2">
@@ -43,10 +46,13 @@ export default function Page() {
             blurDataURL="/images/placeholder.png" // Optional: Add a placeholder image
           />
         </div>
-        <span>LinkedIn</span>
+        
       </div>
       </a>
+      <p className="text-[#339989]" >LinkedIn</p>
       
+    </div>
+    <div className="flex flex-col items-center justify-center space-y-2">
       <a href="https://github.com/DaveSan2021" className="block">
       <div className="flex flex-col items-center">
         <div className="w-24 h-24 mb-2">
@@ -61,9 +67,10 @@ export default function Page() {
             blurDataURL="/images/placeholder.png" // Optional: Add a placeholder image
           />
         </div>
-        <span>Github</span>
+        
       </div>
       </a>
+      <p className="text-[#339989]" >Github</p>
     </div>
     
   </div>

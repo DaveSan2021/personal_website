@@ -25,8 +25,15 @@ const MainNavbar = () => {
         },
     ];
 
+    const handleMenuItemClick = () => {
+        setIsMenuOpen(false); // Close the menu when an item is clicked
+    };
+
+
     return (
-        <Navbar style={{ backgroundColor: "#131515"}} className="text-[#7de2d1]" isBordered>
+        <Navbar 
+        isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}
+        style={{ backgroundColor: "#131515"}} className="text-[#7de2d1]" isBordered>
             {/* Navbar brand */}
 
             <NavbarMenuToggle
@@ -40,12 +47,11 @@ const MainNavbar = () => {
                 </p>
             </NavbarContent>
 
-
-
             {/* Centered Navbar items */}
-            <NavbarContent className="hidden sm:flex gap-4" justify="center">
+            <NavbarContent className="hidden sm:flex gap-4" justify="center" onClick={handleMenuItemClick}>
                 <NavbarItem isActive={pathname === "/"}>
-                    <Link href="/">Home</Link>
+                    <Link href="/">
+                    Home</Link>
                 </NavbarItem>
                 <NavbarItem isActive={pathname === "/resume"}>
                     <Link href="/resume">Resume</Link>
@@ -58,7 +64,7 @@ const MainNavbar = () => {
             {/* Right-aligned Navbar items */}
             <NavbarContent justify="end">
                 <NavbarItem isActive={pathname === "/contacts"}>
-                    <Link href="/contacts">Contact Me</Link>
+                    <Link href="/contacts">My Links</Link>
                 </NavbarItem>
             </NavbarContent>
 
@@ -75,6 +81,7 @@ const MainNavbar = () => {
                                 : "foreground"
                             }
                             href={item.link}
+                            
                         >
                         {item.name}
                         </Link>

@@ -25,9 +25,6 @@ interface ProjectProps {
 
 const Project: React.FC<ProjectProps> = ({ project }) => {
 
-    console.log(project.description)
-    console.log(project.link)
-
     type BackdropType = "blur" | "transparent" | "opaque" | undefined;
     type SizeType = "2xl" | "xs" | "sm" | "md" | "lg" | "xl" | "3xl" | "4xl" | "5xl" | "full" | undefined;
 
@@ -102,7 +99,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
 
             {/* Modal */}
             <Modal 
-                backdrop={backdrop} 
+                backdrop="blur"
                 size={size} 
                 isOpen={disclosureState.isOpen} 
                 onClose={() => handleClose()}

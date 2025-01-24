@@ -52,7 +52,7 @@ const MainPage = () => {
                 {/* Research Modal */}
                 <div className="text-center">
                     <Button className="bg-[#131515] text-[#7de2d1]" onPress={researchDisclosure.onOpen}>Research</Button>
-                    <Modal isOpen={researchDisclosure.isOpen} onOpenChange={researchDisclosure.onOpenChange}>
+                    <Modal backdrop="blur" isOpen={researchDisclosure.isOpen} onOpenChange={researchDisclosure.onOpenChange}>
                         <ModalContent className="bg-[#131515]">
                             {(onClose) => (
                                 <>
@@ -76,7 +76,7 @@ const MainPage = () => {
                 {/* Mission Modal */}
                 <div className="text-center">
                     <Button className="bg-[#131515] text-[#7de2d1]" onPress={missionDisclosure.onOpen}>Mission</Button>
-                    <Modal isOpen={missionDisclosure.isOpen} onOpenChange={missionDisclosure.onOpenChange}>
+                    <Modal backdrop="blur" isOpen={missionDisclosure.isOpen} onOpenChange={missionDisclosure.onOpenChange}>
                         <ModalContent className="bg-[#131515]">
                             {(onClose) => (
                                 <>
