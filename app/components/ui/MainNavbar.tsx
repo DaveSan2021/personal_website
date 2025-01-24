@@ -3,19 +3,44 @@ import {  Navbar,   NavbarBrand,   NavbarContent,   NavbarItem,   NavbarMenuTogg
 import Link from "next/link";
 import { Button } from "@nextui-org/button";
 import { usePathname } from "next/navigation";
+import React from "react";
+import { m } from "framer-motion";
 
 const MainNavbar = () => {
     const pathname = usePathname();
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+    const menuItems = [
+        {
+            name: "Home",
+            link: "/"
+        },
+        {
+            name: "Resume",
+            link: "/resume"
+        },
+        {
+            name: "Projects",
+            link: "/projects"
+        },
+    ];
 
     return (
         <Navbar style={{ backgroundColor: "#131515"}} className="text-[#7de2d1]" isBordered>
             {/* Navbar brand */}
-            <NavbarContent justify="start">
-            <p className="font-bold text-inherit text-white">
-            Davayan <br />
-            Sanyal
-            </p>
+
+            <NavbarMenuToggle
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                className="sm:hidden"
+            />
+
+            <NavbarContent className={isMenuOpen ? 'justify-center' : 'justify-start'}>
+                <p className="font-bold text-inherit text-white">
+                Davayan Sanyal
+                </p>
             </NavbarContent>
+
+
 
             {/* Centered Navbar items */}
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
@@ -36,6 +61,27 @@ const MainNavbar = () => {
                     <Link href="/contacts">Contact Me</Link>
                 </NavbarItem>
             </NavbarContent>
+
+            <NavbarMenu className="flex flex-col">
+                {menuItems.map((item, index) => (
+                    <NavbarMenuItem key={`${item.name}-${index}`} className="flex-none">
+                        <Link
+                            
+                            color={
+                                index === 2 
+                                ? "primary" 
+                                : index === menuItems.length - 1 
+                                ? "danger" 
+                                : "foreground"
+                            }
+                            href={item.link}
+                        >
+                        {item.name}
+                        </Link>
+                    </NavbarMenuItem>
+                ))}
+            </NavbarMenu>
+
             {/* Left Content 
             <NavbarContent className="hidden sm:flex gap-4" justify="start">
                 <NavbarItem>
