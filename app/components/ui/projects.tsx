@@ -5,7 +5,7 @@ export const projects = [
       tldr: "Upload a photo of your fridge, get safe recipes. ReciMed uses computer vision to identify ingredients and generates cooking options that check each one against drug-food interactions for your medications — backed by a RAG pipeline trained on 1,000+ cookbooks and 500+ healthcare papers.",
       description: "Most people don't think about how their medications interact with food. ReciMed does. You upload a photo of your ingredients, a computer vision model identifies them, and the system generates recipes while cross-referencing each ingredient against a RAG pipeline built on 1,000+ cookbooks and 500+ healthcare papers — checking drug-food interactions for 200+ medications in real time. Built on Palantir AIP, the system achieved 95%+ cuisine classification accuracy. The result is a tool that sits at a genuinely underserved intersection: personalized nutrition that is actually aware of your health context, not just your taste preferences.",
       image: "/ReciMed_SC.png", // Replace with /recimed.png once you have a screenshot
-      link: "#",
+      link: "https://github.com/DaveSan2021/ReciMed-AI-Powered-Medical-Recipe-Generator",
     },
     {
       id: 1,
