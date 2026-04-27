@@ -7,7 +7,7 @@ export default function Page() {
             {/*<div className="text-5xl ml-10 mr-10 pt-6 pb-6"> Resume </div>*/}
             <div style={{ width: "100%", height: "100vh", overflow: "hidden" }}>
                 <iframe 
-                src="Resume-9-30-24 copy.pdf" 
+                src="Resume-4-26-26.pdf" 
                 style={{ width: "100%", height: "100%" }} 
             />
             </div>
